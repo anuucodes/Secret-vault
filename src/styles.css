@@ -1,187 +1,169 @@
-/* Import a sleek retro font */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+/* src/styles.css */
 
-/* Body: Dark theme + centered container */
+/* Base & Dark Glow Theme */
 body {
-  font-family: 'Orbitron', sans-serif;
-  background: #0a0a0a;
+  font-family: 'Poppins', sans-serif;
+  background: #0a0a0f;
   color: #fff;
   margin: 0;
-  padding: 0;
+  padding: 20px;
   display: flex;
   justify-content: center;
-  align-items: center; /* Center vertically */
+  align-items: center;
   min-height: 100vh;
 }
 
-/* App container */
 .app-root {
   width: 100%;
-  max-width: 700px;
-  padding: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Cards: Auth and Notes */
-.auth-card,
-.notes-root {
-  width: 100%;
-  background: #1a1a1a;
-  padding: 40px 30px;
-  border-radius: 20px;
-  box-shadow: 0 0 20px #9b59b6, 0 0 40px #8e44ad33;
-  border: 2px solid #9b59b6;
-  overflow: hidden; /* Prevent content overflow */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-/* Inputs */
-input {
-  width: 90%;
-  max-width: 400px;
-  padding: 12px;
-  border: 2px solid #444;
-  border-radius: 12px;
-  margin-bottom: 15px;
-  font-family: inherit;
-  background: #0f0f0f;
-  color: #fff;
-  font-size: 0.95rem;
-  outline: none;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px;
   box-sizing: border-box;
 }
 
-input::placeholder {
-  color: #888;
+.auth-card,
+.notes-root {
+  background: #1c1c2b;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #8e44ad, 0 0 40px #8e44ad33;
+  text-align: center;
 }
 
-/* Buttons */
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background: #0a0a0f;
+  color: #fff;
+  font-size: 16px;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
 button {
-  width: 50%;
-  max-width: 200px;
   padding: 12px 20px;
   border: none;
-  background: #9b59b6;
+  background: #8e44ad;
   color: #fff;
-  border-radius: 15px;
+  border-radius: 10px;
   cursor: pointer;
-  font-weight: bold;
-  font-family: inherit;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  transition: all 0.2s ease;
-  box-shadow: 0 0 10px #9b59b6;
+  font-size: 16px;
+  transition: 0.3s;
 }
 
 button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #9b59b6, 0 0 30px #9b59b6;
+  background: #732d91;
 }
 
-/* Auth clickable spans */
-.auth-card span {
-  color: #9b59b6;
+.auth-actions span {
+  color: #8e44ad;
   cursor: pointer;
-  transition: color 0.2s ease;
-  font-weight: bold;
+  transition: 0.3s;
 }
 
-.auth-card span:hover {
-  color: #e0aaff; /* lighter purple on hover */
+.auth-actions span:hover {
+  color: #d39ff2;
+  text-decoration: underline;
 }
 
-/* Note Card */
 .note-card {
-  width: 90%;
-  background: #121212;
-  border-radius: 15px;
-  padding: 20px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 15px;
   margin-bottom: 15px;
-  box-shadow: 0 0 15px #9b59b633;
-  overflow-wrap: break-word; /* Keep content inside */
-}
-
-.note-card h4 {
-  margin: 0 0 0.5rem 0;
-  font-size: 1rem;
-  color: #9b59b6;
-  text-shadow: 0 0 5px #9b59b6;
+  background: #0f0f1a;
+  box-shadow: 0 0 10px #8e44ad33;
 }
 
 .note-card img {
   max-width: 100%;
-  border-radius: 12px;
-  margin-bottom: 10px;
-  border: 1px solid #444;
+  border-radius: 10px;
+  margin: 10px 0;
 }
 
-.note-actions {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 10px;
-}
-
-.note-actions button:first-child {
-  background: #8e44ad;
-  color: #fff;
-  box-shadow: 0 0 10px #8e44ad;
+.note-actions button {
+  margin-right: 10px;
+  background: #3498db;
 }
 
 .note-actions button:last-child {
-  background: #c0392b;
-  color: #fff;
-  box-shadow: 0 0 10px #c0392b;
+  background: #e74c3c;
 }
 
-.note-actions button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #8e44ad, 0 0 30px #8e44ad;
-}
-
-/* Notes Header */
 .notes-header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  flex-wrap: wrap;
 }
 
-.notes-header h1 {
-  font-family: 'Orbitron', sans-serif; /* sleek retro font */
-  font-size: 2rem; /* bigger size */
-  color: #9b59b6;
-  text-shadow: 0 0 10px #9b59b6, 0 0 20px #8e44ad;
-  margin: 0;
-  text-align: center;
-  letter-spacing: 1px; /* spacing for retro style */
-}
-
-/* Notes Form */
 .notes-form {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 25px;
-  align-items: center;
-  width: 100%;
+  margin: 25px 0;
 }
 
-/* Responsive */
+/* Custom fonts for your vault title */
+.notes-header h1 {
+  font-family: 'Courier New', monospace;
+  font-size: 1.8rem;
+  color: #d39ff2;
+  text-shadow: 0 0 8px #8e44ad;
+  flex: 1 1 100%;
+  margin-bottom: 15px;
+}
+
+/* File preview */
+.file-preview {
+  background: #2a2a3d;
+  padding: 8px;
+  border-radius: 6px;
+  margin: 8px 0;
+}
+
+/* Timestamp styling */
+.timestamp {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 10px;
+  text-align: right;
+}
+
+/* Responsive adjustments */
 @media (max-width: 600px) {
-  .note-actions {
-    flex-direction: column;
+  body {
+    padding: 10px;
+  }
+
+  .auth-card,
+  .notes-root {
+    padding: 20px;
+  }
+
+  .notes-header h1 {
+    font-size: 1.5rem;
   }
 
   button {
-    width: 70%;
+    font-size: 14px;
+    padding: 10px 15px;
   }
 
   input {
-    width: 95%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .note-actions button {
+    margin-bottom: 5px;
+  }
+
+  .notes-header {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
+
