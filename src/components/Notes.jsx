@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { collection, addDoc, query, orderBy, onSnapshot, serverTimestamp, deleteDoc, doc } from 'firebase/firestore'
 import { db } from '../firebase'
 
-import NoteCard from './NotesCard'
+import NoteCard from './Notecard'
 
 export default function Notes({ userId, onLogout }) {
   const [title, setTitle] = useState('')
