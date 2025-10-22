@@ -1,6 +1,6 @@
 // src/App.jsx
 import React, { useState, useEffect } from 'react'
-import Auth from './components/auth'
+import Auth from './components/Auth'
 import Notes from './components/Notes'
 
 export default function App() {
